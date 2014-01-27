@@ -51,6 +51,7 @@
                 });
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            Assert.Equal("application/x-javascript", response.ContentType);
         }
 
         [Fact]
@@ -64,7 +65,6 @@
                 });
 
             Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
-            Assert.Equal("text/javascript", response.ContentType);
         }
 
         [Fact]
